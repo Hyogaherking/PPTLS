@@ -22,6 +22,8 @@
             <div class="option" onclick="pickOption('🖐')">🖐</div>
             <div class="option" onclick="pickOption('✌')">✌</div>
             <div class="option" onclick="pickOption('✊')">✊</div>
+            <div class="option" onclick="pickOption('🦎')">🦎</div>
+            <div class="option" onclick="pickOption('🖖')">🖖</div>
         </div>
     </div>
 
@@ -52,7 +54,7 @@
             }
 
             botBrain() {
-                const option = ["🖐", "✌", "✊"];
+                const option = ["🖐", "✌", "✊","🦎","🖖"];
                 const bot = option[Math.floor(Math.random() * option.length)];
                 return bot;
             }
@@ -60,15 +62,43 @@
             winCalculation() {
                 if (this.botOption == "🖐" && this.playerOption == "✌") {
                     return this.winner = this.playerName
+                } else if (this.botOption == "✊" && this.playerOption == "✌") {
+                    return this.winner = this.botName; 
+                } else if (this.botOption == "🖖" && this.playerOption == "✌") {
+                    return this.winner = this.botName;
+                } else if (this.botOption == "🦎" && this.playerOption == "✌") {
+                    return this.winner = this.playerName
                 } else if (this.botOption == "🖐" && this.playerOption == "✊") {
                     return this.winner = this.botName;
-                } else if (this.botOption == "✌" && this.playerOption == "🖐") {
+                } else if (this.botOption == "🦎" && this.playerOption == "✊") {
+                    return this.winner = this.playerName
+                } else if (this.botOption == "🖖" && this.playerOption == "✊") {
                     return this.winner = this.botName;
                 } else if (this.botOption == "✌" && this.playerOption == "✊") {
                     return this.winner = this.playerName
+                } else if (this.botOption == "🦎" && this.playerOption == "🖖") {
+                    return this.winner = this.botName;
+                } else if (this.botOption == "✌" && this.playerOption == "🖖") {
+                    return this.winner = this.playerName
+                } else if (this.botOption == "🖐" && this.playerOption == "🖖") {
+                    return this.winner = this.botName;
+                } else if (this.botOption == "✊" && this.playerOption == "🖖") {
+                    return this.winner = this.playerName
+                } else if (this.botOption == "✌" && this.playerOption == "🦎") {
+                    return this.winner = this.botName;
+                } else if (this.botOption == "🖐" && this.playerOption == "🦎") {
+                    return this.winner = this.playerName
+                } else if (this.botOption == "🖖" && this.playerOption == "🦎") {
+                    return this.winner = this.playerName
+                } else if (this.botOption == "✊" && this.playerOption == "🦎") {
+                    return this.winner = this.botName;
+                } else if (this.botOption == "✌" && this.playerOption == "🖐") {
+                    return this.winner = this.botName;
+                } else if (this.botOption == "🖖" && this.playerOption == "🖐") {
+                    return this.winner = this.playerName 
                 } else if (this.botOption == "✊" && this.playerOption == "🖐") {
                     return this.winner = this.playerName
-                } else if (this.botOption == "✊" && this.playerOption == "✌") {
+                } else if (this.botOption == "🦎" && this.playerOption == "🖐") {
                     return this.winner = this.botName;
                 } else {
                     return this.winner = "EMPATE"

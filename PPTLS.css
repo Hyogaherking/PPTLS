@@ -19,7 +19,7 @@ body,
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-  border: 3px solid rgb(0,206,209);
+  border: 3px solid rgb(211,211,211);
   width: 400px;
   height: 400px;
   text-align: center;
@@ -37,12 +37,12 @@ body,
   padding: 25px;
   text-align: center;
   font-size: 40px;
-  background-color: Cyan;
+  background-color: LightGrey;
 }
 
 .option:hover {
   cursor: pointer;
-  background-color: Cyan;
+  background-color: LightGrey;
   transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
   transform: scale(105%);
   -webkit-transform: scale(105%);
@@ -53,4 +53,5 @@ body,
   -moz-transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
   -ms-transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
   -o-transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
+}
 }
